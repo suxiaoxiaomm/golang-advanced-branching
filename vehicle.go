@@ -1,13 +1,15 @@
 package main
 
-import (
-
-)
-
-
 // Values array for the feedback.json file
+type Values struct {
+	Models []Model
+}
 
 // Model array for the feedback.json file
+type Model struct {
+	Name     string
+	Feedback []string
+}
 
 type rating float32
 
@@ -19,30 +21,50 @@ const (
 	extraNegative rating = -1.2
 )
 
+type vehicle interface {
+}
+
+type car struct {
+	model       string
+	make        string
+	typeVehicle string
+}
+
+type truck struct {
+	model       string
+	make        string
+	typeVehicle string
+}
+
+type bike struct {
+	model string
+	make  string
+}
+
 func init() {
 
-/*
-	inventory = []vehicle{
-		bike{"FTR 1200", "Indian"},
-		bike{"Iron 1200", "Harley"},
-		car{"Sonata", "Hyundai", "Sedan"},
-		car{"SantaFe", "Hyundai", "SUV"},
-		car{"Civic", "Honda", "Hatchback"},
-		car{"A5", "Audi", "Coupe"},
-		car{"Mazda6", "Mazda", "Sedan"},
-		car{"CRV", "Honda", "SUV"},
-		car{"Camry", "Toyota", "Sedan"},
-		truck{"F-150", "Ford", "Truck"},
-		truck{"RAM1500", "Dodge", "Truck"}}
-*/
-//	vehicleResult = make(map[string]feedbackResult)
+	/*
+		inventory = []vehicle{
+			bike{"FTR 1200", "Indian"},
+			bike{"Iron 1200", "Harley"},
+			car{"Sonata", "Hyundai", "Sedan"},
+			car{"SantaFe", "Hyundai", "SUV"},
+			car{"Civic", "Honda", "Hatchback"},
+			car{"A5", "Audi", "Coupe"},
+			car{"Mazda6", "Mazda", "Sedan"},
+			car{"CRV", "Honda", "SUV"},
+			car{"Camry", "Toyota", "Sedan"},
+			truck{"F-150", "Ford", "Truck"},
+			truck{"RAM1500", "Dodge", "Truck"}}
+	*/
+	//	vehicleResult = make(map[string]feedbackResult)
 
 }
 
 func main() {
 
 	// Generate ratings for the different vehicles
-	
+
 	// Print ratings for the different vehicles
 }
 
